@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faacolim</title>
+    <!-- referencia para los estilos SASS -->
+    <link rel="stylesheet" href="./css/app.css">
+    <!-- referencia para el tipo de fuente de escritura-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!-- CDN fontAwose para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN para el mapa es importante darle un alto para que se visualize -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- CDN para las animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__contenedor">
+            <a class="header__logo" href="index.html">
+                <!-- <h1 class="header__logo">Logo</h1> -->
+                <picture>
+                    <source srcset= './img/logoblancoNombre.webp' type="image/webp">
+                    <source srcset= './img/logoblancoNombre.avif' type="image/avif">
+                    <img src= './img/logoblancoNombre.jpg' alt="imagen portada">
+                </picture>
+            </a>
+    
+            <nav>
+                <a href="catalogo.html" class="header__enlace " href="#">Catalogo</a>
+                <a href="contacto.html" class="header__enlace ">Contactanos</a>
+            </nav>
+        </div>
+    
+    
+    </header>
+    <div class="movil">
+        <div class="movil__contenedor">
+            <a class="movil__logo" href="index.html">
+                <img src="./img/logoblancoNombre.png" alt="">
+            </a>
+            <div class="movil__barras">
+                <img src="./img/barras.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <nav class="movil__navegacion">
+        <a href="catalogo.html" class="header__enlace" >Catalogo</a>
+        <a href="contacto.html" class="header__enlace" >Contactanos</a>
+    </nav>
+    <div class="catalogo">
+
+        <div class="catalogo__contenedor">
+            <div class="catalogo__overlay">
+                <div data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="catalogo__textoimagen">
+                    <h2>Los mejores Productos</h2>
+                </div>
+            </div>
+    
+    
+        </div>
+        <nav class="catalogo__tabs scrollFijo">
+            <button type="button" class="actual" data-catalogos="1">Pollyester Bobina</button>
+            <button type="button" data-catalogos="2">Pollyester Enconado</button>
+            <button type="button" data-catalogos="3">MELT-Pollyester</button>
+            <button type="button" data-catalogos="4">40/2 Costura</button>
+            <button type="button" data-catalogos="5">Acrilico</button>
+            <button type="button" data-catalogos="6">Cardigan</button>
+        </nav>
+    
+        <section class="catalogo__grid " id="catalogos-1">
+            <h1 class="catalogo__titulo">Pollyester Hilo bobina Texturizado calibre 150</h1>
+            <div class="catalogo__contenedorProductos">
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngcononegro.webp" type="image/webp">
+                                <source srcset="./img/pngcononegro.avif" type="image/avif">
+                                <img src="./img/pngcononegro.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p class="catalogo__productocontenedor--descripcion">Negro set</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pangconomarino.webp" type="image/webp">
+                                <source srcset="./img/pangconomarino.avif" type="image/avif">
+                                <img src="./img/pangconomarino.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Marino T434</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngconoverde.webp" type="image/webp">
+                                <source srcset="./img/pngconoverde.avif" type="image/avif">
+                                <img src="./img/pngconoverde.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Verde bandera T468</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngconorosa.webp" type="image/webp">
+                                <source srcset="./img/pngconorosa.avif" type="image/avif">
+                                <img src="./img/pngconorosa.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Caramelo T284</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngcononaranja.webp" type="image/webp">
+                                <source srcset="./img/pngcononaranja.avif" type="image/avif">
+                                <img src="./img/pngcononaranja.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Naranja Neon 1121 T771</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngconomorado.webp" type="image/webp">
+                                <source srcset="./img/pngconomorado.avif" type="image/avif">
+                                <img src="./img/pngconomorado.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Lila SILQ T593</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngconocarne.webp" type="image/webp">
+                                <source srcset="./img/pngconocarne.avif" type="image/avif">
+                                <img src="./img/pngconocarne.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Canela 6605 T143</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngconogris.webp" type="image/webp">
+                                <source srcset="./img/pngconogris.avif" type="image/avif">
+                                <img src="./img/pngconogris.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Ostion 5130 T593</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngconoazulagua.webp" type="image/webp">
+                                <source srcset="./img/pngconoazulagua.avif" type="image/avif">
+                                <img src="./img/pngconoazulagua.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Cielo 2269 T228</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngconoamarillo.webp" type="image/webp">
+                                <source srcset="./img/pngconoamarillo.avif" type="image/avif">
+                                <img src="./img/pngconoamarillo.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Canario SILQ T032</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngconopistache.webp" type="image/webp">
+                                <source srcset="./img/pngconopistache.avif" type="image/avif">
+                                <img src="./img/pngconopistache.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Yerbabuena 4918 T486</p>
+                    </div>
+                </div>
+                 <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pngconoblanco.webp" type="image/webp">
+                                <source srcset="./img/pngconoblanco.avif" type="image/avif">
+                                <img src="./img/pngconoblanco.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Crudo Set</p>
+                    </div>
+                </div> 
+            </div>
+            <!-- <h1 class="catalogo__titulo">Polliester Hilo enconado Texturizado calibre 150</h1> -->
+            <div class="catalogo__contenedorProductos">
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/rojocono.webp" type="image/webp">
+                                <source srcset="./img/rojocono.avif" type="image/avif">
+                                <img src="./img/rojocono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Rojo 810 T508</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/rosafuertecono.webp" type="image/webp">
+                                <source srcset="./img/rosafuertecono.avif" type="image/avif">
+                                <img src="./img/rosafuertecono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Fiusha 2718 "caramelo" T509</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/rosamexicanocono.webp" type="image/webp">
+                                <source srcset="./img/rosamexicanocono.avif" type="image/avif">
+                                <img src="./img/rosamexicanocono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Rosa Pastel G480</p>
+                    </div>
+                </div>
+    
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Compactado 150/48/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/negrocono.webp" type="image/webp">
+                                <source srcset="./img/negrocono.avif" type="image/avif">
+                                <img src="./img/negrocono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Azul oscuro t111</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/griscono.webp" type="image/webp">
+                                <source srcset="./img/griscono.avif" type="image/avif">
+                                <img src="./img/griscono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Sugar Gris 09 T378</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/ginddacono.webp" type="image/webp">
+                                <source srcset="./img/ginddacono.avif" type="image/avif">
+                                <img src="./img/ginddacono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Vino 9J86 T796</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/azulclarocono.webp" type="image/webp">
+                                <source srcset="./img/azulclarocono.avif" type="image/avif">
+                                <img src="./img/azulclarocono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Azul Neon "Caribe" T229</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/fiushacono.webp" type="image/webp">
+                                <source srcset="./img/fiushacono.avif" type="image/avif">
+                                <img src="./img/fiushacono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Magenta 14 T011</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/doradocono.webp" type="image/webp">
+                                <source srcset="./img/doradocono.avif" type="image/avif">
+                                <img src="./img/doradocono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Mostasa T250</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/pistachecono.webp" type="image/webp">
+                                <source srcset="./img/pistachecono.avif" type="image/avif">
+                                <img src="./img/pistachecono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Verde Militar T261</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/blancocono.webp" type="image/webp">
+                                <source srcset="./img/blancocono.avif" type="image/avif">
+                                <img src="./img/blancocono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Blanco T286</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/rosapastelcono.webp" type="image/webp">
+                                <source srcset="./img/rosapastelcono.avif" type="image/avif">
+                                <img src="./img/rosapastelcono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Rosa Neon 3092 T507</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/verdecono.webp" type="image/webp">
+                                <source srcset="./img/verdecono.avif" type="image/avif">
+                                <img src="./img/verdecono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Verde Jade</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/verdefosfocono.webp" type="image/webp">
+                                <source srcset="./img/verdefosfocono.avif" type="image/avif">
+                                <img src="./img/verdefosfocono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Amarillo Neon 125 T125</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/verdequemaojoscono.webp" type="image/webp">
+                                <source srcset="./img/verdequemaojoscono.avif" type="image/avif">
+                                <img src="./img/verdequemaojoscono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Verde Neon 550 T909</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/verdepistachecono.webp" type="image/webp">
+                                <source srcset="./img/verdepistachecono.avif" type="image/avif">
+                                <img src="./img/verdepistachecono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Musgo 3609 T070</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Texturizado 150/48/1</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/negroverdecono.webp" type="image/webp">
+                                <source srcset="./img/negroverdecono.avif" type="image/avif">
+                                <img src="./img/negroverdecono.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Gris Thunder T528</p>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+    
+        <section class="catalogo__grid" id="catalogos-2">
+            <div class="catalogo__contenedorProductos">
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Pollyester Presentacion</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/ciengramos.webp" type="image/webp">
+                                <source srcset="./img/ciengramos.avif" type="image/avif">
+                                <img src="./img/ciengramos.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>100 Gramos Texturizado</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Pollyester Presentacion</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/quinientosgramos.webp" type="image/webp">
+                                <source srcset="./img/quinientosgramos.avif" type="image/avif">
+                                <img src="./img/quinientosgramos.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>300 Gramos Texturizado</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Pollyester Presentacion</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/trecientosgramos.webp" type="image/webp">
+                                <source srcset="./img/trecientosgramos.avif" type="image/avif">
+                                <img src="./img/trecientosgramos.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>500 Gramos Texturizado</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="catalogo__grid" id="catalogos-3">
+            <div class="catalogo__contenedorProductos">
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Nylom Hot Melt Yarn</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/nylon.webp" type="image/webp">
+                                <source srcset="./img/nylon.avif" type="image/avif">
+                                <img src="./img/nylon.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Nylom Hot Melt Yarn</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Polyester Hot Melt Yarn</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/nylongordo.webp" type="image/webp">
+                                <source srcset="./img/nylongordo.avif" type="image/avif">
+                                <img src="./img/nylongordo.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Polyester Hot Melt Yarn</p>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <section class="catalogo__grid" id="catalogos-4">
+            <div class="catalogo__contenedorProductos">
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>blanco costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/40-20-blanco.webp" type="image/webp">
+                                <source srcset="./img/40-20-blanco.avif" type="image/avif">
+                                <img src="./img/40-20-blanco.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>blanco costura 40/2</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>negro costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif">
+                                <img src="./img/40-20-negro.jpg" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>negro costura 40/2</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>canario costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <!-- <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif"> -->
+                                <img src="./img/40-20-canario.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>canario costura 40/2</p>
+                    </div>
+                </div>
+                <!-- <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>crudo costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                
+                                <img src="./img/40-20crudo.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>crudo costura 40/2</p>
+                    </div>
+                </div> -->
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Fiusha costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <!-- <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif"> -->
+                                <img src="./img/40-20fiusha.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Fiusha costura 40/2</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>marino costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <!-- <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif"> -->
+                                <img src="./img/40-20-marino.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>marino costura 40/2</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Rojo costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <!-- <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif"> -->
+                                <img src="./img/40-20rojo.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Rojo costura 40/2</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Rosa Pastel costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <!-- <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif"> -->
+                                <img src="./img/40-20rosapastel.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Rosa Pastel costura 40/2</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Sugar costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <!-- <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif"> -->
+                                <img src="./img/40-20-sugar.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Sugar costura 40/2</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Vino costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <!-- <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif"> -->
+                                <img src="./img/40-20vino.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Vino costura 40/2</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Azul Rey costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <!-- <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif"> -->
+                                <img src="./img/40-20azul.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Azul Rey costura 40/2</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Oxford costura 40/2</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <!-- <source srcset="./img/40-20-negro.webp" type="image/webp">
+                                <source srcset="./img/40-20-negro.avif" type="image/avif"> -->
+                                <img src="./img/40-20oxford.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Oxford costura 40/2</p>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+    
+        <section class="catalogo__grid" id="catalogos-5">
+            <div class="catalogo__contenedorProductos">
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Acrilico</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/acrilanGrisFuerte.webp" type="image/webp">
+                                <source srcset="./img/acrilanGrisFuerte.avif" type="image/avif">
+                                <img src="./img/acrilanGrisFuerte.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>TB GRIS OX. 1/34</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Acrilico</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/acrilicoGrisClaro.webp" type="image/webp">
+                                <source srcset="./img/acrilicoGrisClaro.avif" type="image/avif">
+                                <img src="./img/acrilicoGrisClaro.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>TB GRIS JA. 1/34</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Acrilico</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/acrilicoMarino.webp" type="image/webp">
+                                <source srcset="./img/acrilicoMarino.avif" type="image/avif">
+                                <img src="./img/acrilicoMarino.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>TB AZUL COLEGIAL 1/34</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Acrilico</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/acrilicoNegro.webp" type="image/webp">
+                                <source srcset="./img/acrilicoNegro.avif" type="image/avif">
+                                <img src="./img/acrilicoNegro.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>TB NEGRO 1/34</p>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <section class="catalogo__grid" id="catalogos-6">
+            <div class="catalogo__contenedorProductos">
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Cardigan</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/telaRosa.webp" type="image/webp">
+                                <source srcset="./img/telaRosa.avif" type="image/avif">
+                                <img src="./img/telaRosa.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Fiusha</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Cardigan</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/telaAzulRey.webp" type="image/webp">
+                                <source srcset="./img/telaAzulRey.avif" type="image/avif">
+                                <img src="./img/telaAzulRey.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Azul Rey</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Cardigan</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/telaGrisClaro.webp" type="image/webp">
+                                <source srcset="./img/telaGrisClaro.avif" type="image/avif">
+                                <img src="./img/telaGrisClaro.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Sugar</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Cardigan</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/telaRojo.webp" type="image/webp">
+                                <source srcset="./img/telaRojo.avif" type="image/avif">
+                                <img src="./img/telaRojo.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Rojo</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Cardigan</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/telaMarino.webp" type="image/webp">
+                                <source srcset="./img/telaMarino.avif" type="image/avif">
+                                <img src="./img/telaMarino.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Marino</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Cardigan</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/telaVerdeAgua.webp" type="image/webp">
+                                <source srcset="./img/telaVerdeAgua.avif" type="image/avif">
+                                <img src="./img/telaVerdeAgua.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Menta</p>
+                    </div>
+                </div>
+                <div class="catalogo__productocontenedor">
+                    <div class="catalogo__productocontenedor--informacion">
+                        <h4>Cardigan</h4>
+                        <div class="catalogo__productocontenedor--imagen">
+                            <picture>
+                                <source srcset="./img/telaGrisOxford.webp" type="image/webp">
+                                <source srcset="./img/telaGrisOxford.avif" type="image/avif">
+                                <img src="./img/telaGrisOxford.png" alt="imagen portada">
+                            </picture>
+                        </div>
+                        <p>Oxford</p>
+                    </div>
+                </div>
+    
+    
+            </div>
+        </section>
+    
+    
+    </div>
+    <div class="contenedorbtn">
+        <a href="https://api.whatsapp.com/send?phone=+524451053628" class="btnwhat" target="_blank"><i class="fab fa-whatsapp fa-3x"></i></a>
+    </div>
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__contenido">
+                <div class="footer__logo">
+                    <!-- <img src="" alt=""> -->
+                    <picture>
+                        <source srcset="./img/logoblancoNombre.webp" type="image/webp">
+                        <source srcset="./img/logoblancoNombre.avif" type="image/avif">
+                        <img src="./img/logoblancoNombre.jpg" alt="imagen portada">
+                    </picture>
+                </div>
+                <div>
+                    <p class="footer__texto">Faacolim distribuidor de hilo de alta calidad.</p>
+                </div>
+            </div>
+            <div class="footer__contactanos">
+    
+                <div class="footer__contactanos-contenedor">
+                    <p>Contactos</p>
+                    <div>
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        <p> +52 5510660240</p>
+                    </div>
+    
+                    <div>
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        <p> +52 4451053628</p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        <p> +52 4454572289</p>
+                    </div>
+                </div>
+    
+            </div>
+            <nav class="footer__redes">
+    
+                <a href="https://www.facebook.com/profile.php?id=100090347114255" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/faacolim?igshid=YmMyMTA2M2Y=" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    
+            </nav>
+        </div>
+    
+        <div class="footer__copyright">
+            <picture>
+                <source srcset="./img/logoblancoNombre.webp" type="image/webp">
+                <source srcset="./img/logoblancoNombre.avif" type="image/avif">
+                <img src="./img/logoblancoNombre.jpg" alt="imagen footer">
+            </picture>
+            <p>- Todos los derechos reservados 2023</p>
+        </div>
+    </footer>
+    <script src="./js/navcatalogo.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/movileHeader.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

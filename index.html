@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faacolim</title>
+    <!-- referencia para los estilos SASS -->
+    <link rel="stylesheet" href="./css/app.css">
+    <!-- referencia para el tipo de fuente de escritura-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!-- CDN fontAwose para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN para el mapa es importante darle un alto para que se visualize -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- CDN para las animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__contenedor">
+            <a class="header__logo" href="index.html">
+                <!-- <h1 class="header__logo">Logo</h1> -->
+                <picture>
+                    <source srcset= './img/logoblancoNombre.webp' type="image/webp">
+                    <source srcset= './img/logoblancoNombre.avif' type="image/avif">
+                    <img src= './img/logoblancoNombre.jpg' alt="imagen portada">
+                </picture>
+            </a>
+    
+            <nav>
+                <a href="catalogo.html" class="header__enlace ">Catalogo</a>
+                <a href="contacto.html" class="header__enlace ">Contactanos</a>
+            </nav>
+        </div>
+    
+    
+    </header>
+    <div class="movil">
+        <div class="movil__contenedor">
+            <a class="movil__logo" href="index.html">
+                <img src="./img/logoblancoNombre.png" alt="">
+            </a>
+    
+            <div class="movil__barras">
+                <img src="./img/barras.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <nav class="movil__navegacion">
+        <a href="catalogo.html" class="header__enlace" >Catalogo</a>
+        <a href="contacto.html" class="header__enlace" >Contactanos</a>
+    </nav>
+    <div class="home">
+           
+
+
+        <div class="home__imagenCarrucel  ">
+            <div class="">
+                <div class="">
+                    <div class="home__overlay">
+                        <div data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="home__contenidoimagen">
+                            <h2>Hilos Faacolim</h2>
+                            <a href="contacto.html">Contactanos</a>
+                        </div>
+                    </div>
+    
+                    <picture>
+                        <source srcset="./img/portadauno.webp" type="image/webp">
+                        <source srcset="./img/portadauno.avif" type="image/avif">
+                        <img src="./img/portadauno.jpg" alt="imagen portada">
+                    </picture>
+                </div>
+    
+                <!-- <div class="">
+                    <div class="home__overlay">
+                        <div class="home__contenidoimagen">
+                            <h2>Faacolim</h2>
+                            <a href="/contactanos">Contactanos</a>
+                        </div>
+                    </div>
+    
+                    <picture>
+                        <source srcset="./img/portadados.webp' ?>" type="image/webp">
+                        <source srcset="./img/portadados.avif' ?>" type="image/avif">
+                        <img src="./img/portadados.jpg' ?>" alt="imagen portada">
+                    </picture>
+                </div> -->
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+        </div>
+
+        <div class="contenedorPromocion-modal">
+            <a href="">Promocion 2023</a>
+        </div>
+        <h1 class="titulo" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Sobre Nosotros</h1>
+        <div class="home__nosotros scrollFijo">
+            
+    
+            <!-- pondremos tres iconos representando la empresa -->
+            <div class="home__nosotros-contenedorIcono">
+                <!-- 1.- seguridad -->
+                <i data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="fa-solid fa-lock fa-4x"></i>
+                <h3 data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Seguridad</h3>
+                <p data-aos="fade-down" data-aos-delay="100" data-aos-duration="1300">Tu compra está protegida y garantizada con nosotros</p>
+            </div>
+            <div class="home__nosotros-contenedorIcono">
+                <!-- 2.-envios a todo el mundo -->
+                <i data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="fa-solid fa-plane fa-4x"></i>
+                <h3 data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Envíos</h3>
+                <p data-aos="fade-down" data-aos-delay="100" data-aos-duration="1300">Contamos con envios a toda la república Mexicana</p>
+            </div>
+            <div class="home__nosotros-contenedorIcono">
+                <!-- 3.- diponibilidad (horario) -->
+                <i data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="fa-solid fa-calendar-days fa-4x"></i>
+                <h3 data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Disponibilidad</h3>
+                <p data-aos="fade-down" data-aos-delay="100" data-aos-duration="1300">De lunes a viernes de 9am a 6pm y los sábados de 9am a 2pm, Domingo sin servicio.</p>
+            </div>
+            <div class="home__nosotros-contenedorIcono">
+                <!-- 3.- diponibilidad (horario) -->
+                <i data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="fa-solid fa-hand-holding-dollar fa-4x"></i>
+                <h3 data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Precio</h3>
+                <p data-aos="fade-down" data-aos-delay="100" data-aos-duration="1300">Contamos con precio al mayoreo para mas información contáctanos</p>
+            </div>
+    
+        </div>
+    
+        <!-- <div class="home__socios ">
+            <h1 data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="home__socios-titulo">Socios</h1>
+    
+            <div class="home__socios-contenedorSocios">
+                <div data-aos="<?php echo aos_animacion(); ?>" data-aos-delay="100" data-aos-duration="1000" class="home__socios-contenedorSocios-imagen">
+    
+                    <picture>
+                        <source srcset="<?php echo 'http://localhost:3000' . '/build/img/socios.webp' ?>" type="image/webp">
+                        <source srcset="<?php echo 'http://localhost:3000' . '/build//img/socios.avif' ?>" type="image/avif">
+                        <img src="<?php echo 'http://localhost:3000' . '/build/img/socios.png' ?>" alt="imagen portada">
+                    </picture>
+                </div>
+    
+                <div data-aos="<?php echo aos_animacion(); ?>" data-aos-delay="100" data-aos-duration="1000" class="home__socios-contenedorSocios-imagen">
+    
+                    <picture>
+                        <source srcset="<?php echo 'http://localhost:3000' . '/build/img/socios.webp' ?>" type="image/webp">
+                        <source srcset="<?php echo 'http://localhost:3000' . '/build//img/socios.avif' ?>" type="image/avif">
+                        <img src="<?php echo 'http://localhost:3000' . '/build/img/socios.png' ?>" alt="imagen portada">
+                    </picture>
+                </div>
+    
+            </div>
+    
+        </div> -->
+        <div class="home__mapa">
+            <h1 data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="home__mapa-titulo">visita nuestras sucursales</h1>
+        </div>
+        <div data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" class="mapa" id="mapa"></div>
+    
+    </div>
+    <div class="contenedorbtn">
+        <a href="https://api.whatsapp.com/send?phone=+524451053628" class="btnwhat" target="_blank"><i class="fab fa-whatsapp fa-3x"></i></a>
+    </div>
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__contenido">
+                <div class="footer__logo">
+                    <!-- <img src="" alt=""> -->
+                    <picture>
+                        <source srcset="./img/logoblancoNombre.webp" type="image/webp">
+                        <source srcset="./img/logoblancoNombre.avif" type="image/avif">
+                        <img src="./img/logoblancoNombre.jpg" alt="imagen portada">
+                    </picture>
+                </div>
+                <div>
+                    <p class="footer__texto">Faacolim distribuidor de hilo de alta calidad.</p>
+                </div>
+            </div>
+            <div class="footer__contactanos">
+    
+                <div class="footer__contactanos-contenedor">
+                    <p>Contactos</p>
+                    <div>
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        <p> +52 5510660240</p>
+                    </div>
+    
+                    <div>
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        <p> +52 4451053628</p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        <p> +52 4454572289</p>
+                    </div>
+                </div>
+    
+            </div>
+            <nav class="footer__redes">
+    
+                <a href="https://www.facebook.com/profile.php?id=100090347114255" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/faacolim?igshid=YmMyMTA2M2Y=" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    
+            </nav>
+        </div>
+    
+        <div class="footer__copyright">
+            <picture>
+                <source srcset="./img/logoblancoNombre.webp" type="image/webp">
+                <source srcset="./img/logoblancoNombre.avif" type="image/avif">
+                <img src="./img/logoblancoNombre.jpg" alt="imagen footer">
+            </picture>
+            <p>- Todos los derechos reservados 2023</p>
+        </div>
+    </footer>
+
+    <script src="./js/mapa.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/movileHeader.js"></script>
+    <!-- <script src="./js/slider.js"></script> -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

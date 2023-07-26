@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faacolim</title>
+    <!-- referencia para los estilos SASS -->
+    <link rel="stylesheet" href="./css/app.css">
+    <!-- referencia para el tipo de fuente de escritura-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!-- CDN fontAwose para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN para el mapa es importante darle un alto para que se visualize -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- CDN para las animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__contenedor">
+            <a class="header__logo" href="index.html">
+                <!-- <h1 class="header__logo">Logo</h1> -->
+                <picture>
+                    <source srcset= './img/logoblancoNombre.webp' type="image/webp">
+                    <source srcset= './img/logoblancoNombre.avif' type="image/avif">
+                    <img src= './img/logoblancoNombre.jpg' alt="imagen portada">
+                </picture>
+            </a>
+    
+            <nav>
+                <a href="catalogo.html" class="header__enlace " href="#">Catalogo</a>
+                <a href="contacto.html" class="header__enlace ">Contactanos</a>
+            </nav>
+        </div>
+    
+    
+    </header>
+    <div class="movil">
+        <div class="movil__contenedor">
+            <a class="movil__logo" href="index.html">
+                <img src="./img/logoblancoNombre.png" alt="">
+            </a>
+    
+            <div class="movil__barras">
+                <img src="./img/barras.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <nav class="movil__navegacion">
+        <a href="catalogo.html" class="header__enlace" >Catalogo</a>
+        <a href="/contacto" class="header__enlace" >Contactanos</a>
+    </nav>
+
+    <div class="contacto">
+
+        <form class="contacto__formulario">
+            <fieldset class="contacto__formulario-fieldset">
+                <legend class="contacto__formulario-legend">Información del correo</legend>
+                <div class="contacto__formulario-campo">
+                    <label class="contacto__formulario-label" for="">Nombre</label>
+                    <input required class="contacto__formulario-input" type="text" placeholder="Escribe tu nombre">
+                </div>
+                <div class="contacto__formulario-campo">
+                    <label class="contacto__formulario-label" for="">Apellidos</label>
+                    <input required class="contacto__formulario-input" type="text" placeholder="Escribe tu Apellido">
+                </div>
+                <div class="contacto__formulario-campo">
+                    <label class="contacto__formulario-label" for="">Estado</label>
+                    <input required class="contacto__formulario-input" type="text" placeholder="Ejemplo: Guanajuato">
+                </div>
+                <div class="contacto__formulario-campo">
+                    <label class="contacto__formulario-label" for="">Municipio</label>
+                    <input required class="contacto__formulario-input" type="text" placeholder="Ejemplo: León">
+                </div>
+                <div class="contacto__formulario-campo">
+                    <label class="contacto__formulario-label" for="">Teléfono</label>
+                    <input required class="contacto__formulario-input" type="text" placeholder="Ejemplo: 5553213344">
+                </div>
+                <div class="contacto__formulario-campo">
+                    <label class="contacto__formulario-label" for="">Mensaje</label>
+                    <textarea required class="contacto__formulario-textarea" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+    
+                <input type="submit" class="contacto__formulario-submitCorreo" value="Enviar">
+            </fieldset>
+    
+    
+        </form>
+    
+    
+    </div>
+
+    <div class="contenedorbtn">
+        <a href="https://api.whatsapp.com/send?phone=+524451053628" class="btnwhat" target="_blank"><i class="fab fa-whatsapp fa-3x"></i></a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__contenido">
+                <div class="footer__logo">
+                    <!-- <img src="" alt=""> -->
+                    <picture>
+                        <source srcset="./img/logoblancoNombre.webp" type="image/webp">
+                        <source srcset="./img/logoblancoNombre.avif" type="image/avif">
+                        <img src="./img/logoblancoNombre.jpg" alt="imagen portada">
+                    </picture>
+                </div>
+                <div>
+                    <p class="footer__texto">Faacolim distribuidor de hilo de alta calidad.</p>
+                </div>
+            </div>
+            <div class="footer__contactanos">
+    
+                <div class="footer__contactanos-contenedor">
+                    <p>Contactos</p>
+                    <div>
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        <p> +52 5510660240</p>
+                    </div>
+    
+                    <div>
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        <p> +52 4451053628</p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        <p> +52 4454572289</p>
+                    </div>
+                </div>
+    
+            </div>
+            <nav class="footer__redes">
+    
+                <a href="https://www.facebook.com/profile.php?id=100090347114255" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/faacolim?igshid=YmMyMTA2M2Y=" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    
+            </nav>
+        </div>
+    
+        <div class="footer__copyright">
+            <picture>
+                <source srcset="./img/logoblancoNombre.webp" type="image/webp">
+                <source srcset="./img/logoblancoNombre.avif" type="image/avif">
+                <img src="./img/logoblancoNombre.jpg" alt="imagen footer">
+            </picture>
+            <p>- Todos los derechos reservados 2023</p>
+        </div>
+    </footer>
+
+    <script src="./js/navcatalogo.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/movileHeader.js"></script>
+    
+</body>
+</html>
