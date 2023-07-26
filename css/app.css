@@ -5,4 +5,20 @@ html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:b
     justify-content: center;
     margin: 1rem 0 0 0;
 }
+
+.btn{
+    background-color: #3282bb;
+    padding: 1.5rem 4rem;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+    /* transition-property: background-color; */
+    transition-duration: .3s;
+
+  
+}
+.btn:hover{
+    background-color: #044370;
+}
 /*# sourceMappingURL=app.css.map */
