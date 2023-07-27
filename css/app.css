@@ -20,5 +20,76 @@ html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:b
 }
 .btn:hover{
     background-color: #044370;
+    cursor: pointer;
+}
+
+.modal{
+    position: absolute;
+    background-color: rgb(0, 0, 0 , .8);
+    padding-top: 90rem;
+    padding-bottom: 109rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     z-index: 10; 
+   
+   
+}
+
+
+
+
+
+.contenedorModal{
+    max-width: 50rem; 
+    background-color: white;
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(-30rem);
+    transition-property: all;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+    border-radius: 1rem;
+
+}
+
+.animar{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+.cerrarModal{
+    transform: translateY(-200%);
+    opacity: 0;
+    padding: 0;
+    
+}
+.modal__btncerrar{
+    background-color: #bb3232;
+    padding: 1.5rem 4rem;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+    /* transition-property: background-color; */
+    transition-duration: .3s;
+}
+.modal__btncerrar:hover{
+    cursor: pointer;
+    background-color: #7a0a0a;
+}
+
+.oferta{
+    font-weight: 300;
+}
+.ofertaSpan{
+    font-weight: 700;
+}
+.opciones{
+
 }
 /*# sourceMappingURL=app.css.map */
