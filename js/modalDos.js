@@ -14,18 +14,17 @@
 
         divModalDos.innerHTML = `
         <form class="contenedorModalDos"> 
-        <h1>Titulo</h1>
+        <h1>Cardigan</h1>
         <div class="campo"> 
             <picture>
-            <img  class="modalImagen" src="./img/conoCartel.png" alt="imagen portada">
+            <img  class="modalImagen" src="./img/telaNegro.png" alt="imagen portada">
             </picture>
         <div>
     
         <div class="campo"> 
         
-            <p class="oferta">SPEC: <span class= "ofertaSpan">DTY 75D/36F SD RW NTM </span></p>
-            <p class="oferta">GRADE: <span class= "ofertaSpan"> AA | N.WT(KG) | 33</span></p>
-            <p class="oferta">LOT: <span class= "ofertaSpan">2V0782SE-49 | G. WT (KG) | 35.65</span></p>
+            <p class="oferta">Color: <span class= "ofertaSpan">Negro</span></p>
+           
     
         </div>
         
