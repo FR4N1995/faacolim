@@ -23,7 +23,7 @@ html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:b
     cursor: pointer;
 }
 
-.modal{
+.modal, .modalDos{
     position: absolute;
     background-color: rgb(0, 0, 0 , .8);
     padding-top: 90rem;
@@ -41,7 +41,7 @@ html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:b
 
 
 
-.contenedorModal{
+.contenedorModal, .contenedorModalDos{
     max-width: 50rem; 
     background-color: white;
     padding: 2rem;
