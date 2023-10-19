@@ -56,37 +56,42 @@
         <a href="/contacto" class="header__enlace" >Contactanos</a>
     </nav>
 
-    <div class="contacto">
+    <div class="contacto" >
 
-        <form class="contacto__formulario">
+        <form class="contacto__formulario " id="formulario">
             <fieldset class="contacto__formulario-fieldset">
-                <legend class="contacto__formulario-legend">Información del correo</legend>
-                <div class="contacto__formulario-campo">
-                    <label class="contacto__formulario-label" for="">Nombre</label>
-                    <input required class="contacto__formulario-input" type="text" placeholder="Escribe tu nombre">
+                <legend class="contacto__formulario-legend">Información del Mensaje</legend>
+                <div class="contacto__formulario-campo agregar-cita">
+                    <label class="contacto__formulario-label" >Nombre</label>
+                    <input class="contacto__formulario-input nombre" name="nombre" id="nombre" type="text"  placeholder="Escribe tu nombre">
                 </div>
                 <div class="contacto__formulario-campo">
                     <label class="contacto__formulario-label" for="">Apellidos</label>
-                    <input required class="contacto__formulario-input" type="text" placeholder="Escribe tu Apellido">
+                    <input id="apellidos"  name="apellidos" class="contacto__formulario-input" type="text" placeholder="Escribe tu Apellido">
                 </div>
                 <div class="contacto__formulario-campo">
+                    <label class="contacto__formulario-label" for="">email</label>
+                    <input id="email" name="email" class="contacto__formulario-input" type="email" placeholder="Escribe tu Apellido">
+                </div>
+
+                <div class="contacto__formulario-campo">
                     <label class="contacto__formulario-label" for="">Estado</label>
-                    <input required class="contacto__formulario-input" type="text" placeholder="Ejemplo: Guanajuato">
+                    <input name="estado" class="contacto__formulario-input" type="text" placeholder="Ejemplo: Guanajuato">
                 </div>
                 <div class="contacto__formulario-campo">
                     <label class="contacto__formulario-label" for="">Municipio</label>
-                    <input required class="contacto__formulario-input" type="text" placeholder="Ejemplo: León">
+                    <input name="munisipio" class="contacto__formulario-input" type="text" placeholder="Ejemplo: León">
                 </div>
                 <div class="contacto__formulario-campo">
                     <label class="contacto__formulario-label" for="">Teléfono</label>
-                    <input required class="contacto__formulario-input" type="text" placeholder="Ejemplo: 5553213344">
+                    <input name="numero" class="contacto__formulario-input" type="text" placeholder="Ejemplo: 5553213344">
                 </div>
                 <div class="contacto__formulario-campo">
                     <label class="contacto__formulario-label" for="">Mensaje</label>
-                    <textarea required class="contacto__formulario-textarea" name="" id="" cols="30" rows="10"></textarea>
+                    <textarea placeholder="debe contener mas de 30 carecteres " class="contacto__formulario-textarea" name="mensaje" id="" cols="30" rows="10"></textarea>
                 </div>
     
-                <input type="submit" class="contacto__formulario-submitCorreo" value="Enviar">
+                <input type="submit" id="btnEnviar" class="contacto__formulario-submitCorreo" value="Enviar">
             </fieldset>
     
     
@@ -156,9 +161,11 @@
         </div>
     </footer>
 
+    <script src="./js/contacto.js"></script>
     <script src="./js/navcatalogo.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/movileHeader.js"></script>
+  
     
 </body>
 </html>
