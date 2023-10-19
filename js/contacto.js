@@ -39,7 +39,7 @@
             }
         
           
-            const url = `https://web.whatsapp.com/send?phone=+524451053628&text=${encodeURIComponent("nombre: " + nombre + " apellidos " + apellidos + " email:" + email + " Mensaje: " + mensaje)}`
+            const url = `https://api.whatsapp.com/send?phone=+524451053628&text=${encodeURIComponent("nombre: " + nombre + " apellidos " + apellidos + " email:" + email + " Mensaje: " + mensaje)}`
             window.open(url, '_blank');
 
         }
